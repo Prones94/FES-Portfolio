@@ -6,10 +6,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Advaned Project - FES</title>
 		<link rel="stylesheet" href="style.css" />
+		<script src="index.js"></script>
 		<script
 			src="https://kit.fontawesome.com/f281c76026.js"
 			crossorigin="anonymous"
 		></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: 'imYni-zi_N7uzV2rK',
+				});
+			})();
+		</script>
 	</head>
 	<body>
 		<section id="landing-page">
@@ -181,20 +193,29 @@
 					<h3 class="modal__sub-title modal__sub-title--contact">
 						I'm currently open to new opportunities
 					</h3>
-					<form action="" id="contact__form">
+					<form id="contact__form">
 						<div class="form__item">
 							<label for="name" class="form__item--label">Name</label>
-							<input type="text" name="user_name" class="input" required />
+							<input type="text" name="user_name" class="input"   />
 						</div>
 						<div class="form__item">
 							<label for="user_email" class="form__item--label">Email</label>
-							<input type="email" name="user_email" class="input" required />
+							<input type="email" name="user_email" class="input"   />
 						</div>
 						<div class="form__item">
-							<label for="user_message" class="form__item--label">Message</label>
-							<textarea type="text" name="user_message" class="input" required ></textarea>
+							<label for="user_message" class="form__item--label"
+								>Message</label
+							>
+							<textarea
+								type="text"
+								name="user_message"
+								class="input"
+
+							></textarea>
 						</div>
-						<button id="contact__submit" class="form__submit">Send it my way!</button>
+						<button id="contact__submit" class="form__submit">
+							Send it my way!
+						</button>
 					</form>
 					<div class="modal__overlay modal__overlay--loading">
 						<i class="fa-solid fa-spinner icon"></i>
